@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CP1-WEB/DEV</title>
+</head>
+<body>
+
+  <h1> "Criando um programa que receba um nome de usuário e uma senha e verifique se eles correspondem aos dados de um usuário cadastrado" </h1>
+    
+    <form>
+        <label for="nomeDeUsuario">Nome de usuário:</label>
+        <input type="text" id="nomeDeUsuario" name="nomeDeUsuario"><br>
+    
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha"><br>
+    
+        <input type="button" value="Login" onclick="fazerLogin()">
+      </form>
+    
+      <script>
+        function fazerLogin() {
+          // Pega o nome de usuário e senha inseridos nos campos de entrada
+          var nomeDeUsuario = document.getElementById("nomeDeUsuario").value;
+          var senha = document.getElementById("senha").value;
+    
+          // Verifica se o nome de usuário e senha correspondem aos dados de um usuário cadastrado
+          if (nomeDeUsuario === "admin" && senha === "1234") {
+            // Login realizado com sucesso
+            alert("Login realizado com sucesso!");
+          } else {
+            // Falha de autenticação
+            alert("Nome de usuário ou senha incorretos. Tente novamente.");
+          }
+        }
+      </script>
+    </body>
+    </html>
+</body>
+</html>

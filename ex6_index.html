@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <title>CP1-WEB/DEV</title>
+    <h1> "Programa que calcule a média de 7 notas" </h1>
+	<script>
+		function calcularMedia() {
+			// Pega os valores das notas
+			var nota1 = parseFloat(document.getElementById("nota1").value);
+			var nota2 = parseFloat(document.getElementById("nota2").value);
+			var nota3 = parseFloat(document.getElementById("nota3").value);
+			var nota4 = parseFloat(document.getElementById("nota4").value);
+			var nota5 = parseFloat(document.getElementById("nota5").value);
+			var nota6 = parseFloat(document.getElementById("nota6").value);
+			var nota7 = parseFloat(document.getElementById("nota7").value);
+			
+			// Calcula a média
+			var media = (nota1 + nota2 + nota3 + nota4 + nota5 + nota6 + nota7) / 7;
+			
+			// Exibe a média
+			document.getElementById("media").innerHTML = "Sua média é: " + media.toFixed(2);
+			
+			// Verifica se o aluno foi aprovado ou reprovado
+			if (media >= 6) {
+				document.getElementById("resultado").innerHTML = "Parabéns, você foi aprovado!";
+			} else {
+				document.getElementById("resultado").innerHTML = "Infelizmente, você foi reprovado.";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Calculadora de Média</h1>
+	<label for="nota1">Nota 1:</label>
+	<input type="number" id="nota1" name="nota1"><br><br>
+	<label for="nota2">Nota 2:</label>
+	<input type="number" id="nota2" name="nota2"><br><br>
+	<label for="nota3">Nota 3:</label>
+	<input type="number" id="nota3" name="nota3"><br><br>
+	<label for="nota4">Nota 4:</label>
+	<input type="number" id="nota4" name="nota4"><br><br>
+	<label for="nota5">Nota 5:</label>
+	<input type="number" id="nota5" name="nota5"><br><br>
+	<label for="nota6">Nota 6:</label>
+	<input type="number" id="nota6" name="nota6"><br><br>
+	<label for="nota7">Nota 7:</label>
+	<input type="number" id="nota7" name="nota7"><br><br>
+	<button onclick="calcularMedia()">Calcular Média</button><br><br>
+	<div id="media"></div>
+	<div id="resultado"></div>
+</body>
+</html>
+</head>
+<body>
+    
+</body>
+</html>
